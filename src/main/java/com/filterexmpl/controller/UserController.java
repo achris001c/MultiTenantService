@@ -31,9 +31,9 @@ public class UserController {
                                   @PathVariable("userId") int userAccountId) {
         Session session = entityManager.unwrap(Session.class);
         session.enableFilter("userAccountFilter").setParameter("tenantId", tenantId);
-        Optional<UserAccount> userAccountOptional= userAccountRepository.getById(userAccountId);
-        if(userAccountOptional.isPresent()) {
-            return userAccountOptional.get().getFirstName();
+        UserAccount userAccountOptional= userAccountRepository.getById(userAccountId);
+        if(userAccountOptional != null) {
+            return userAccountOptional.getFirstName();
         }else {
             return "User : " + userAccountId + " not found in tenant : " + tenantId;
         }
