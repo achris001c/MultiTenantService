@@ -6,4 +6,4 @@
 ### [SWAGGER-UI](http://localhost:8080/swagger-ui.html)
 
 #### User Id 1 mapped to Tenant Id 1 
-#### User Id 2 mapper to Tenant Id 2
+#### User Id 2 mapped to Tenant Id 2
