@@ -26,11 +26,11 @@ create sequence tenant_sequence
     NO MAXVALUE
     CACHE 1;
 
-insert into tenant (id,name) values(tenant_sequence.nextval, 'Tenant1');
-insert into tenant (id,name) values(tenant_sequence.nextval, 'Tenant2');
+insert into tenant (id,name) values(1, 'Tenant1');
+insert into tenant (id,name) values(2, 'Tenant2');
 
-insert into user_account(id, first_name, last_name, tenant_id) values(user_sequence.nextval, 'name1', 'name1', 1);
-insert into user_account(id, first_name, last_name, tenant_id) values(user_sequence.nextval, 'name2', 'name2', 2);
+insert into user_account(id, first_name, last_name, tenant_id) values(1, 'name1', 'name1', 1);
+insert into user_account(id, first_name, last_name, tenant_id) values(2, 'name2', 'name2', 2);
 
 
 

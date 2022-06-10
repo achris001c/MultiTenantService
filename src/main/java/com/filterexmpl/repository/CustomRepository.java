@@ -7,8 +7,4 @@ import java.util.Optional;
 
 @NoRepositoryBean
 public interface CustomRepository<T, ID> extends JpaRepository<T, ID> {
-    default Optional<T> findById(ID id) {
-        throw new RuntimeException();
-    }
-    Optional<T> getById(ID id);
 }
